@@ -92,7 +92,7 @@ GameManager.prototype.run = function() {
   this.ai.getBest().then( best => {
     this.move(best.move);
     var timeout = animationDelay;
-    if (this.running && !this.over && !this.won) {
+    if (this.running && !this.over) {
       var self = this;
       setTimeout(function(){
         self.run();
